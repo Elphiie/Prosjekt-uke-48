@@ -11,3 +11,25 @@
     align-content: center;
     color: white;
 }
+
+.hide{
+    display: none;
+}
+
+.coverimg{
+    width: 400px;
+}
+
+.ulBtn{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
