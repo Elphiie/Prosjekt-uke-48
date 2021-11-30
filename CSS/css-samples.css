@@ -1,0 +1,13 @@
+.audio-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.upload{
+    display:grid;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}

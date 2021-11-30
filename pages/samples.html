@@ -2,8 +2,10 @@
 <html>
   <head>
     <title>E-sport</title>
-    <link href="css/css-hjemmeside.css" rel="stylesheet">
+    <link href="../css/css-hjemmeside.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/css-samples.css">
     <script type="text/javascript" src="../script/headshoulderskneesandtoes.js"></script>
+    <script type="text/javascript" src="script/media.js"></script>
 </head>
   <body>
     <div>
@@ -28,15 +30,33 @@
     <div id="header" class="gaming">
       <div class="text">
         <h1 style="font-size:50px">ARE YOU<br>READY?</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-        <a href="https://www.link.com" class="bn1">Find out more</a>
+      </div>
+
+      <div id="Upload" class="upload">
+        <label for="myfile" class="label">Choose a file:</label>
+        <input type="file" id="myfile" name="myfile">
+        <br>
+        <button onclick="ulAudio()">Upload</button>
+      </div>
+
+      <br>
+      <br>
+
+      <div id="audio-container" class="audio-grid">
+        <div id="audio-tile" class="audio">
+          <audio src="audio/fools.mp3" type="audio/mp3"></audio>
+
+          <button onclick="playAudio()">Play</button>
+          <button onclick="pauseAudio()">Pause</button>
+          <button onclick="dlAudio()">Download</button>
+
+        </div>
       </div>
 
       </div>
         <div class=gradient></div>
+        </div>
+
 
        <footer>
 <div class="footcontainer">
