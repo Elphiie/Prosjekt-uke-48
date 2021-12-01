@@ -35,18 +35,21 @@
       
       <div id="ul" class="form">
         <button type="button" class="ulBtn" id="ulBtn">Submit a song</button>
-        <form>
-          <label> Your name:<br />
-              <input type='text' class="profile-name" placeholder="Your Name">
-         </label>
-          <label> Upload profile picture:<br />
-             <input type='file' accept="image/*" class="profile-img"placeholder="">
-          </label>
-          <label>Upload Profile VoiceNote:<br />
-             <input type='file' accept="audio/*" placeholder="" class="profile-aud">
-          </label>
-          <button type="submit" class="btn">Update profile</button>
+        <form id="form" class="fields hide">
+         
+            <input id="field1" type='text' name="files[]" class="sample-name hide" placeholder="Sample Name" multiple>
+           
+          
+            <input id="field2" type='file' name="files[]" accept="image/*" class="profile-img hide"placeholder="" multiple>
+
+          
+            <input id="field3" type='file' name="files[]" accept="audio/*" placeholder="" class="sample-aud hide" multiple>
+          
+          
       </form>
+      <button id="nextBtn" class="nextBtn" onclick="next()">Next</button>
+      <br>
+      <button type="submit" class="btn">Update profile</button>
         
       </div>
 
