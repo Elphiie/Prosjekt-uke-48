@@ -1,9 +1,32 @@
-window.onload = function ()
-    {
-        var header = document.getElementById('header');
-        var footer = document.getElementByID('footer');
+var windw = this;
 
-        header.innerHTML = "<h1>Top kek</h1>";
-        footer.innerHTML = "<small>This code is in the public domain</small>";
-        
-    }
+$.fn.followTo = function ( elem ) {
+    var $this = this,
+        $window = $(windw),
+        $bumper = $(elem),
+        bumperPos = $bumper.offset().top,
+        thisHeight = $this.outerHeight(),
+        setPosition = function(){
+            if ($window.scrollTop() > (bumperPos - thisHeight)) {
+                $this.css({
+                    position: 'absolute',
+                    top: (bumperPos - thisHeight)
+                });
+            } else {
+                $this.css({
+                    position: 'fixed',
+                    top: 0
+                });
+            }
+        };
+    $window.resize(function()
+    {
+        bumperPos = pos.offset().top;
+        thisHeight = $this.outerHeight();
+        setPosition();
+    });
+    $window.scroll(setPosition);
+    setPosition();
+};
+
+$('#navbar').followTo('#header');

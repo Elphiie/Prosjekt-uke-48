@@ -1,8 +1,10 @@
 .audio-grid{
     display: grid;
-    justify-content: center;
-    align-content: center;
+    grid-auto-columns: 3;
+    grid-template-columns: auto auto auto;
+
 }
+
 
 .upload{
     display:grid;
@@ -16,12 +18,28 @@
     display: none;
 }
 
-.coverimg{
-    width: 400px;
+.title-cover{
+    text-align: center;
 }
 
-.ulBtn{
-    display: flex;
+h2 span{
+    padding: 6px;
+    background-color: rgba(25,96,114,255);
+    border-radius: 25px;
+    border:rgba(25,96,114,150) ;
+    border-style:groove;
+}
+
+.coverimg{
+    width: 250px;
+}
+
+.audio{
+    text-align: center;
+}
+
+#ulBtn{
+    display: grid;
     text-align: center;
     justify-content: center;
     align-content: center;

@@ -1,107 +1,106 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>E-sport</title>
-    <link href="../css/css-hjemmeside.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/css-samples.css">
-    <script type="text/javascript" src="../script/headshoulderskneesandtoes.js"></script>
-</head>
-  <body>
-
-    <div>
-    <div class="navbar">
-      <ul>
-        <li><a href="pages\test.html">Home</a></li>
-        <li><a href="Team.html">Team</a></li>
-        <li><a href="https://www.link.com" target="_blank">About</a></li>
-        <li><a href="https://www.link.com" target="_blank">Contact</a></li>
-      </ul>
-    </div>
-    <div class="socialmediaicons">
+      <title>E-sport</title>
+      <link href="../css/css-Index.css" rel="stylesheet">
+      <link href="../css/css-samples.css" rel="stylesheet">
+  </head>
+    <body>
+      <script type="text/javascript" src="script/media.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="../script/headshoulderskneesandtoes.js"></script>
+      <div class="maincontainer">
+        <div id="navbar">
           <ul>
-            <li><a href="link.com"><img src="img/twitch-tv-16.png" width="16px" height="16px"/></a></li>
-            <li><a href="link.com"><img src="img/instagram-16.png" width="16px" height="16px"/></a></li>
-            <li><a href="link.com"><img src="img/facebook-16.png" width="16px" height="16px"/></a></li>
-            <li><a href="link.com"><img src="img/twitter-16.png" width="16px" height="16px"/></a></li>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="https://www.link.com">Sample Packs</a></li>
+            <li><a href="https://www.link.com" target="_blank">About & Contact</a></li>
+            <li><a href="https://www.link.com" target="_blank">Videos</a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/twitch-tv-16.png" width="16px" height="16px"/></a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/instagram-16.png" width="16px" height="16px"/></a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/facebook-16.png" width="16px" height="16px"/></a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/twitter-16.png" width="16px" height="16px"/></a></li>
           </ul>
-    </div>
-  </div>
-
-    <div id="header" class="gaming">
-      <div class="text">
-        <h1 style="font-size:50px">ARE YOU<br>READY?</h1>
-      </div>
-
-      
-      <div id="ul" class="form">
-        <button type="button" class="ulBtn" id="ulBtn">Submit a song</button>
-        <form id="form" class="fields hide">
-         
-            <input id="field1" type='text' name="files[]" class="sample-name hide" placeholder="Sample Name" multiple>
-           
-          
-            <input id="field2" type='file' name="files[]" accept="image/*" class="profile-img hide"placeholder="" multiple>
-
-          
-            <input id="field3" type='file' name="files[]" accept="audio/*" placeholder="" class="sample-aud hide" multiple>
-          
-          
-      </form>
-      <button id="nextBtn" class="nextBtn" onclick="next()">Next</button>
-      <br>
-      <button type="submit" class="btn">Update profile</button>
-        
-      </div>
-
-      <br>
-      <br>
-
-      <div id="audio-container" class="audio-grid">
-        <div class="audio">
-          
-          <img src=" " class="coverimg">
-          <h2></h2>
-          </div>
-          <figure>
-            <audio class="aud"
-                controls
-                src=" ">
-                    Your browser does not support the
-                    <code>audio</code> element.
-            </audio>
-          <script type="text/javascript" src="script/media.js"></script>
-          </figure>
-      </div>
-
-      </div>
-        <div class=gradient></div>
         </div>
+         <div id="header">
+          <div class="text">
+           <h1 style="font-size:50px">QUALITY<br>SAMPLES</h1>
+            <br>
+             <a href="https://www.link.com" class="bn1">Find out more</a>
+          </div>
 
+         </div>
+         <!--put all page content in the div beneath-->
+        <div id="pagecont" class="pagecontentcontainer">
 
-       <footer>
-<div class="footcontainer">
-    <div class="footleft">
-      <strong>About</strong><br>
-      <a href="mailto:Tallisen@live.com">About us</a><br>
-      <a href="https://www.link.com">Blog</a><br>
-      <a href="https://www.link.com">Terms of Service</a><br>
-    </div>
+          <div id="ul" class="form">
 
-    <div class="footlefttwo">
-      <strong>Placeholder</strong>
-    </div>
+            <button type="button" id="ulBtn" onclick="hideContent()">Submit a song</button>
 
-    <div class="footright">
-      <strong>Placeholder</strong>
+            <form id="form" class="fields">
+              <input id="field1" type='text' class="sample-name" placeholder="Sample Name" multiple>
+              <br>
+              <label for="field2">
+                <input id="field2" type='file' accept="image/*" class="cover-img" placeholder="Cover Art" multiple>
+              </label>
+              
+              <br>
+              <input id="field3" type='file' accept="audio/*" placeholder="Audio file" class="sample-aud" multiple>
+              <br>
+              <button type="submit" class="btn" id="btn">Upload</button>   
+            </form>
+          
+            
+        </div>
+    
+          <br>
+          <br>
+    
+          <div id="audio-container" class="audio-grid">
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src=" " class="coverimg">
+              </div>
+                <h2><span></span></h2>
+
+              <div class="audio">
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src=" ">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+              </div>
+            </div>
+
+            
+
+          </div>
+
+          <div id="footer">
+            <ul class="about">
+              <li><b>About us</b></li>
+              <li><a href="mailto:Tallisen@live.com">About</a></li>
+              <li><a href="https://www.link.com">Blog</a></li>
+              <li><a href="https://www.link.com">Terms of Service</a></li>
+            </ul>
+              <ul class="socialmedia">
+                <li><b>Social Media</b></li>
+                <li><a href="https://www.link.com">Facebook</a></li>
+                <li><a href="https://www.link.com">Instagram</a></li>
+                <li><a href="https://www.link.com">Twitter</a></li>
+              </ul>
+               <ul class="contact">
+                <li><b>Contact</b></li>
+                <li><a href="https://www.link.com">E-Mail</a></li>
+                <li><a href="https://www.link.com">Telephone</a></li>
+                <li><a href="https://www.link.com">Fax</a></li>
+               </ul>
+           </div>
+     </div>
     </div>
-    <div class="footrighttwo">
-      <strong>Kontakt</strong><br>
-      <a href="mailto:Tallisen@live.com">Tallisen@live.com</a><br>
-      <a href="https://www.link.com">Facebook</a><br>
-      <a href="https://www.link.com">Instagram</a><br>
-      <a href="https://www.link.com">Twitter</a>
-    </div>
-</div>
-     </footer>
   </body>
 </html>

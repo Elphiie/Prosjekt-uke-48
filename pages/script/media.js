@@ -1,56 +1,107 @@
-var ulBtn = document.getElementById('ulBtn')
-var loadup = document.getElementById('form')
-ulBtn.addEventListener('click', () =>{
-    if (loadup.style.display === 'none', ulBtn.style.display === 'flex'){
-        loadup.style.display = 'block', ulBtn.style.display = 'none';
+
+function hideContent() {
+var loadup = document.getElementById('form');
+    if (loadup.style.display === 'none'){
+        loadup.style.display = 'block';
     } else {
-        loadup.style.display = 'none', ulBtn.style.display = 'flex';
+        loadup.style.display = 'none';
     }
-})
+};
 
-
-var sampleName = document.getElementById('field1').id=1
-var ulImg = document.getElementById('field2').id=2
-var ulAudio = document.getElementById('field3').id=3
-var nxtBtn = document.getElementById('nextBtn')
-
-
+/*
 const getValuesFromInputs = () =>{
     const profileName = document.querySelector('input.sample-name').value;
-    const profileImg = document.querySelector('input.cover-img').files[0];
-    const profileAud = document.querySelector('input.sample-aud').files[0];
  
     document.querySelector('form').style.display = 'none';
  
-    return [profileName, profileImg, profileAud];
+    return [profileName];
  
  }
 
  const convertInputValues = () => {
-    const [profileName, profileImg, profileAud] = getValuesFromInputs();
+    const [profileName] = getValuesFromInputs();
   
-    const profileImgURL = URL.createObjectURL(profileImg);
-    const profileAudURL = URL.createObjectURL(profileAud);
-  
-    return[profileAudURL, profileImgURL, profileName ]
+    return[profileName]
   }
 
   const addInputToProfile = () => {
 
-    const [profileAudURL, profileImgURL, profileName ]  = convertInputValues();
+    const [profileName]  = convertInputValues();
 
-    document.querySelector('.audio h2').innerHTML = `${profileName}`;
-    document.querySelector('.audio img').setAttribute('src', profileImgURL);
-    document.querySelector('.aud').setAttribute('src', profileAudURL);
+    document.querySelector('.title-cover span').innerHTML = `${profileName}`;
+    
 
 }
 
 document.querySelector('.btn').addEventListener('click', (e) => {
-    if (ulBtn.style.display === 'none'){
-        ulBtn.style.display = 'flex';
+    if ( === 'none'){
+         = 'flex';
     } else {
-        ulBtn.style.display = 'none';
+         = 'none';
     }
     e.preventDefault();
     addInputToProfile();
   });
+
+const songName = [];
+const coverArt = [];
+const sample = [];
+
+const profileName = document.querySelector('input.sample-name').value;
+
+function addSample(imageBlob) {
+  sample.push(imageBlob);
+}
+
+function addName(imageBlob) {
+  songName.push(imageBlob);
+}
+
+function addArt(imageBlob) {
+  coverArt.push(imageBlob);
+}
+
+function redrawAudio() {
+  const divForSample = document.getElementsByClassName('auio');
+  divForSample.innerHTML = '<audio class="aud" controls src=" ">Your browser does not support the<code>audio</code> element.</audio>';
+  sample.forEach((imageBlob) => {
+    const aud = document.createElement('audio');
+    aud.src = URL.createObjectURL(imageBlob);
+    divForSample.appendChild(aud);
+  });
+}
+
+function redrawImg() {
+    const divForImages = document.getElementById('image');
+    divForImages.innerHTML = '<img src=" " class="coverimg">';
+    coverArt.forEach((imageBlob) => {
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(imageBlob);
+      divForImages.appendChild(img);
+    });
+  }
+
+function addSampleAndRedraw() {
+  const fileInput = document.getElementById('field3');
+  if (fileInput.files.length === 1) {
+    addSample(fileInput.files[0]);
+    redrawAudio();
+  } else {
+    alert('No file selected. Select a file and try again.');
+  }
+}
+
+function addImageAndRedraw() {
+    const fileInput = document.getElementById('field2');
+    if (fileInput.files.length === 1) {
+      addImage(fileInput.files[0]);
+      redrawImg();
+    } else {
+      alert('No file selected. Select a file and try again.');
+    }
+  }
+  
+
+
+const button = document.getElementById('btn');
+button.addEventListener('click', addSampleAndRedraw, addImageAndRedraw);*/
