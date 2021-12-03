@@ -35,19 +35,30 @@
 
           <div id="ul" class="form">
 
-            <button type="button" id="ulBtn" onclick="hideContent()">Submit a song</button>
+            <button type="button" id="ulBtn" onclick="hideContent(), hideBtn()">Submit a song</button>
 
-            <form id="form" class="fields">
-              <input id="field1" type='text' class="sample-name" placeholder="Sample Name" multiple>
+            <form runat="Server" id="form" class="fields hide">
+              <input id="field1" type='text' class="sample-name input-color" placeholder="Sample Name">
               <br>
-              <label for="field2">
-                <input id="field2" type='file' accept="image/*" class="cover-img" placeholder="Cover Art" multiple>
-              </label>
-              
               <br>
-              <input id="field3" type='file' accept="audio/*" placeholder="Audio file" class="sample-aud" multiple>
+              <label for="field2" class="button">Select an image</label>
+              <input id="field2" type='file' accept="image/*" class="cover-img input-color" style="visibility:hidden;" placeholder=" " onchange="loadImg(event)">
               <br>
-              <button type="submit" class="btn" id="btn">Upload</button>   
+              <br>
+              <img id="previewImg" src="#" alt="your image">
+              <br>
+              <br>
+              <label for="field3" class="button">Select a track</label>
+              <input id="field3" type='file' accept="audio/*" class="sample-aud input-color" style="visibility:hidden;" placeholder=" " onchange="loadAud(event)">
+              <br>
+              <br>
+              <audio controls id="previewAud" src="#">
+                Your browser does not support the <code>audio</code> element.
+              </audio>
+              <br>
+              <br>
+              <button type="submit" class="btn" id="btn">Upload</button>
+              <button type="reset" class="btn" id="btn2">Reset</button>
             </form>
           
             
@@ -56,19 +67,55 @@
           <br>
           <br>
     
-          <div id="audio-container" class="audio-grid">
+          <div id="audio-container" class="sample-grid">
 
             <div class="sample-container">
               <div id="image" class="cover">
-                <img src=" " class="coverimg">
+                <img src="../img/D20.png" class="coverimg">
               </div>
-                <h2><span></span></h2>
+                <h2><span>Testing if Work</span></h2>
 
               <div class="audio">
                 <figure>
                   <audio class="aud"
                       controls
-                      src=" ">
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+              </div>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D20.png" class="coverimg">
+              </div>
+                <h2><span>Testing if Work</span></h2>
+
+              <div class="audio">
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+              </div>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D20.png" class="coverimg">
+              </div>
+                <h2><span>Testing if Work</span></h2>
+
+              <div class="audio">
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
                           Your browser does not support the
                           <code>audio</code> element.
                   </audio>

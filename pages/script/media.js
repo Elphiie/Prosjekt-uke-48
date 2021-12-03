@@ -1,49 +1,91 @@
 
 function hideContent() {
 var loadup = document.getElementById('form');
-    if (loadup.style.display === 'none'){
-        loadup.style.display = 'block';
-    } else {
-        loadup.style.display = 'none';
-    }
+
+var displaySetting = loadup.style.display;
+
+  if (displaySetting == 'block'){
+      loadup.style.display = 'none';
+  } else {
+      loadup.style.display = 'block';
+  }
 };
 
-/*
+
+function hideBtn() { 
+
+var submitBtn = document.getElementById('ulBtn');
+
+var btnDisplay = submitBtn.style.display;
+  if(btnDisplay == 'none'){
+    submitBtn.style.display = 'grid';
+  } else{
+    submitBtn.style.display = 'none';
+  }
+}
+
+
 const getValuesFromInputs = () =>{
     const profileName = document.querySelector('input.sample-name').value;
- 
+    const coverImg = document.querySelector('input.cover-img').files[0];
     document.querySelector('form').style.display = 'none';
  
-    return [profileName];
+    return [profileName, coverImg];
  
  }
 
  const convertInputValues = () => {
-    const [profileName] = getValuesFromInputs();
+    const [profileName, coverImg] = getValuesFromInputs();
   
-    return[profileName]
+    const coverImgURL = URL.createObjectURL(coverImg);
+
+    return[coverImgURL, profileName]
   }
 
   const addInputToProfile = () => {
 
-    const [profileName]  = convertInputValues();
+    const [profileName, coverImgURL]  = convertInputValues();
 
     document.querySelector('.title-cover span').innerHTML = `${profileName}`;
+    document.querySelector('.cover img').setAttribute('src', coverImgURL);
     
 
 }
 
-document.querySelector('.btn').addEventListener('click', (e) => {
-    if ( === 'none'){
-         = 'flex';
-    } else {
-         = 'none';
+var loadImg = function(event) {
+  var outputImg = document.getElementById('previewImg');
+  var hideImg = outputImg.style.display;
+  outputImg.src = URL.createObjectURL(event.target.files[0]);
+  outputImg.onload = function() {
+    URL.revokeObjectURL(outputImg.src)// free memory
+    if (hideImg == 'block'){
+      outputImg.style.display = 'none';
+    }else{
+      outputImg.style.display = 'block';
     }
+  }
+};
+
+var loadAud = function(event) {
+  var outputAud = document.getElementById('previewAud');
+  var hideAud = outputAud.style.display;
+  outputAud.src = URL.createObjectURL(event.target.files[0]);
+  if (hideAud == 'block'){
+    outputAud.style.display = 'none';
+  }else{
+    outputAud.style.display = 'block';
+  }
+  outputAud.onload = function() {
+    URL.revokeObjectURL(outputAud.src)// free memory
+  }
+};
+
+document.querySelector('.btn').addEventListener('click', (e) => {
     e.preventDefault();
     addInputToProfile();
   });
 
-const songName = [];
+/*const songName = [];
 const coverArt = [];
 const sample = [];
 

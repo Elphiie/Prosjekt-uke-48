@@ -1,10 +1,26 @@
-.audio-grid{
+.sample-grid{
     display: grid;
     grid-auto-columns: 3;
     grid-template-columns: auto auto auto;
-
 }
 
+.sample-container{
+    display: grid;
+    text-align: center;
+}
+
+.input-color{
+    color: white;
+}
+
+#previewImg{
+    width: 200px;
+    display: none;
+}
+
+#previewAud{
+    display: none;
+}
 
 .upload{
     display:grid;
@@ -50,4 +66,20 @@ h2 span{
     text-align: center;
     justify-content: center;
     align-content: center;
+}
+
+.button{
+    border: black;
+    background-color: white;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.button:hover{
+    background-color:silver;
+}
+
+.button:active{
+    background-color: white;
 }
