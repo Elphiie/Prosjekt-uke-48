@@ -102,70 +102,17 @@ document.querySelector('#btn').addEventListener('click', (e) => {
   }else {
     ulContent.style.display = 'block';
   }
+  var parentDiv = document.createElement('div').setAttribute
+  var childDiv = document.createElement('div');
+  var imgElement = document.createElement('img');
+  var titleElement = document.createElement('h2');
+  var spanElement = document.createElement('span')
+  var figureElement = document.createElement('figure');
+  var audElement = document.createElement('audio');
+  document.getElementById('audio-container').appendChild(newElement);
+
   e.preventDefault();
   addInputToProfile();
 });
 
 
-/*const songName = [];
-const coverArt = [];
-const sample = [];
-
-const sampleName = document.querySelector('input.sample-name').value;
-
-function addSample(imageBlob) {
-  sample.push(imageBlob);
-}
-
-function addName(imageBlob) {
-  songName.push(imageBlob);
-}
-
-function addArt(imageBlob) {
-  coverArt.push(imageBlob);
-}
-
-function redrawAudio() {
-  const divForSample = document.getElementsByClassName('auio');
-  divForSample.innerHTML = '<audio class="aud" controls src=" ">Your browser does not support the<code>audio</code> element.</audio>';
-  sample.forEach((imageBlob) => {
-    const aud = document.createElement('audio');
-    aud.src = URL.createObjectURL(imageBlob);
-    divForSample.appendChild(aud);
-  });
-}
-
-function redrawImg() {
-    const divForImages = document.getElementById('image');
-    divForImages.innerHTML = '<img src=" " class="coverimg">';
-    coverArt.forEach((imageBlob) => {
-      const img = document.createElement('img');
-      img.src = URL.createObjectURL(imageBlob);
-      divForImages.appendChild(img);
-    });
-  }
-
-function addSampleAndRedraw() {
-  const fileInput = document.getElementById('field3');
-  if (fileInput.files.length === 1) {
-    addSample(fileInput.files[0]);
-    redrawAudio();
-  } else {
-    alert('No file selected. Select a file and try again.');
-  }
-}
-
-function addImageAndRedraw() {
-    const fileInput = document.getElementById('field2');
-    if (fileInput.files.length === 1) {
-      addImage(fileInput.files[0]);
-      redrawImg();
-    } else {
-      alert('No file selected. Select a file and try again.');
-    }
-  }
-  
-
-
-const button = document.getElementById('btn');
-button.addEventListener('click', addSampleAndRedraw, addImageAndRedraw);*/
