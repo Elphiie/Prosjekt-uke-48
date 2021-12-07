@@ -6,59 +6,52 @@
       <link href="../css/css-samples.css" rel="stylesheet">
   </head>
     <body>
-      <script type="text/javascript" src="script/media.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script type="text/javascript" src="../script/headshoulderskneesandtoes.js"></script>
       <div class="maincontainer">
+        
         <div id="navbar">
           <ul>
             <li><a href="Index.html">Home</a></li>
             <li><a href="https://www.link.com">Sample Packs</a></li>
             <li><a href="https://www.link.com" target="_blank">About & Contact</a></li>
             <li><a href="https://www.link.com" target="_blank">Videos</a></li>
-            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/twitch-tv-16.png" width="16px" height="16px"/></a></li>
-            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/instagram-16.png" width="16px" height="16px"/></a></li>
-            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/facebook-16.png" width="16px" height="16px"/></a></li>
-            <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/twitter-16.png" width="16px" height="16px"/></a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="../img/twitch-tv-16.png" width="16px" height="16px"/></a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="../img/instagram-16.png" width="16px" height="16px"/></a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="../img/facebook-16.png" width="16px" height="16px"/></a></li>
+            <li class="socialmediaicons"><a href="https://www.link.com"><img src="../img/twitter-16.png" width="16px" height="16px"/></a></li>
           </ul>
         </div>
-         <div id="header">
+
+        <div id="header">
           <div class="text">
            <h1 style="font-size:50px">QUALITY<br>SAMPLES</h1>
             <br>
              <a href="https://www.link.com" class="bn1">Find out more</a>
           </div>
 
-         </div>
+        </div>
+        
          <!--put all page content in the div beneath-->
+        <div id="navstop"></div>
         <div id="pagecont" class="pagecontentcontainer">
-
+          <button type="button" class="ulBtn" id="ulBtn" onclick="hideContent(), hideBtn()">Submit a song</button>
           <div id="ul" class="form">
-
-            <button type="button" id="ulBtn" onclick="hideContent(), hideBtn()">Submit a song</button>
-
             <form runat="Server" id="form" class="fields hide">
-              <input id="field1" type='text' class="sample-name input-color" placeholder="Sample Name">
+              <input id="field1" type='text' class="profile-name input-style" placeholder="Sample Name">
               <br>
               <br>
               <label for="field2" class="button">Select an image</label>
-              <input id="field2" type='file' accept="image/*" class="cover-img input-color" style="visibility:hidden;" placeholder=" " onchange="loadImg(event)">
-              <br>
+              <input id="field2" type='file' accept="image/*" class="profile-img input-style" style="visibility:hidden;" placeholder="" onchange="loadImg(event)">
               <br>
               <img id="previewImg" src="#" alt="your image">
               <br>
-              <br>
               <label for="field3" class="button">Select a track</label>
-              <input id="field3" type='file' accept="audio/*" class="sample-aud input-color" style="visibility:hidden;" placeholder=" " onchange="loadAud(event)">
-              <br>
+              <input id="field3" type='file' accept="audio/*" class="profile-aud input-style" style="visibility:hidden;" placeholder="" onchange="loadAud(event)">
               <br>
               <audio controls id="previewAud" src="#">
                 Your browser does not support the <code>audio</code> element.
               </audio>
-              <br>
-              <br>
-              <button type="submit" class="btn" id="btn">Upload</button>
-              <button type="reset" class="btn" id="btn2">Reset</button>
+              <button type="submit" class="btn" id="btn" onclick="showBtn(), addInputToProfile()">Upload</button>
             </form>
           
             
@@ -66,16 +59,27 @@
     
           <br>
           <br>
-    
+
           <div id="audio-container" class="sample-grid">
-
+            <div id = "uploaded-container" class="sample-container hide">
+              <div class="profile cover">
+                <img src="" class="coverimg">
+                <h2><span></span></h2>
+              </div>
+            <figure class="align">
+               <audio class="aud"
+                    controls
+                    src=" ">
+                      Your browser does not support the
+                      <code>audio</code> element.
+                </audio>
+            </figure>
+           </div>
             <div class="sample-container">
               <div id="image" class="cover">
-                <img src="../img/D20.png" class="coverimg">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
               </div>
-                <h2><span>Testing if Work</span></h2>
-
-              <div class="audio">
                 <figure>
                   <audio class="aud"
                       controls
@@ -84,47 +88,112 @@
                           <code>audio</code> element.
                   </audio>
                 </figure>
-              </div>
             </div>
-
-            <div class="sample-container">
-              <div id="image" class="cover">
-                <img src="../img/D20.png" class="coverimg">
-              </div>
-                <h2><span>Testing if Work</span></h2>
-
-              <div class="audio">
-                <figure>
-                  <audio class="aud"
-                      controls
-                      src="../media/Epic beat.mp3">
-                          Your browser does not support the
-                          <code>audio</code> element.
-                  </audio>
-                </figure>
-              </div>
-            </div>
-
-            <div class="sample-container">
-              <div id="image" class="cover">
-                <img src="../img/D20.png" class="coverimg">
-              </div>
-                <h2><span>Testing if Work</span></h2>
-
-              <div class="audio">
-                <figure>
-                  <audio class="aud"
-                      controls
-                      src="../media/Epic beat.mp3">
-                          Your browser does not support the
-                          <code>audio</code> element.
-                  </audio>
-                </figure>
-              </div>
-            </div>
-
             
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
 
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
           </div>
 
           <div id="footer">
@@ -149,5 +218,7 @@
            </div>
      </div>
     </div>
+    <script type="text/javascript" src="../script/headshoulderskneesandtoes.js"></script>
+    <script type="text/javascript" src="script/media.js"></script>
   </body>
 </html>

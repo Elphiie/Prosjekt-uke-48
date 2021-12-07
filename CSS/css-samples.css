@@ -4,22 +4,46 @@
     grid-template-columns: auto auto auto;
 }
 
+.form{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fields{
+    text-align: center;
+}
+
+.ulBtn{
+    text-align: center;
+    margin: 0 46.7%;
+    width: 102px;
+}
+
+
 .sample-container{
     display: grid;
     text-align: center;
 }
 
-.input-color{
-    color: white;
+.input-style{
+    text-align: center;
 }
 
 #previewImg{
     width: 200px;
     display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 43.6%;
 }
 
 #previewAud{
     display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 40%;
 }
 
 .upload{
@@ -46,26 +70,25 @@ h2 span{
     border-style:groove;
 }
 
+.align{
+    padding-top: 18px;
+}
+
 .coverimg{
     width: 250px;
+    height: 250px;
 }
 
-.audio{
+.aud{
     text-align: center;
-}
-
-#ulBtn{
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
 }
 
 .btn {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
+    transform: translate(0 50%);
+}
+
+.btn2 {
+    transform: translate(0 50%);
 }
 
 .button{
@@ -74,6 +97,8 @@ h2 span{
     padding: 2px;
     padding-left: 4px;
     padding-right: 4px;
+    justify-content: center;
+    margin:0 40%;
 }
 
 .button:hover{

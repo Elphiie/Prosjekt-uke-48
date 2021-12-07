@@ -18,11 +18,17 @@ body, html {
   background-repeat: no-repeat;
   border:solid 5px green;
 }
+
+#navstop{
+  margin-bottom: -100px;
+}
+
 .pagecontentcontainer{
   margin-top:150px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
+  padding-top: 50px;
   
   border:solid 5px green;
 }
@@ -39,7 +45,6 @@ body, html {
 /* Navigation bar start*/
 #navbar{
   overflow: hidden;
-  position:fixed;
   justify-content: center;
   width:100%;
   top:0px;

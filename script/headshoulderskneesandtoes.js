@@ -29,4 +29,4 @@ $.fn.followTo = function ( elem ) {
     setPosition();
 };
 
-$('#navbar').followTo('#header');
+$('#navbar').followTo('#navstop');

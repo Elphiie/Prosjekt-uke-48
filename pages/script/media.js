@@ -1,4 +1,3 @@
-
 function hideContent() {
 var loadup = document.getElementById('form');
 
@@ -18,7 +17,7 @@ var submitBtn = document.getElementById('ulBtn');
 
 var btnDisplay = submitBtn.style.display;
   if(btnDisplay == 'none'){
-    submitBtn.style.display = 'grid';
+    submitBtn.style.display = 'block';
   } else{
     submitBtn.style.display = 'none';
   }
@@ -26,29 +25,32 @@ var btnDisplay = submitBtn.style.display;
 
 
 const getValuesFromInputs = () =>{
-    const profileName = document.querySelector('input.sample-name').value;
-    const coverImg = document.querySelector('input.cover-img').files[0];
-    document.querySelector('form').style.display = 'none';
+  const profileName = document.querySelector('#field1').value;
+  const profileImg = document.querySelector('#field2').files[0];
+  const profileAud = document.querySelector('#field3').files[0];
+
+  document.querySelector('form').style.display = 'none';
+
+  return [profileName, profileImg, profileAud];
+
+}
+
+const convertInputValues = () => {
+   const [profileName, profileImg, profileAud] = getValuesFromInputs();
  
-    return [profileName, coverImg];
+   const profileImgURL = URL.createObjectURL(profileImg);
+   const profileAudURL = URL.createObjectURL(profileAud);
  
+   return[profileAudURL, profileImgURL, profileName ]
  }
 
- const convertInputValues = () => {
-    const [profileName, coverImg] = getValuesFromInputs();
-  
-    const coverImgURL = URL.createObjectURL(coverImg);
+ const addInputToProfile = () => {
 
-    return[coverImgURL, profileName]
-  }
+   const [profileAudURL, profileImgURL, profileName ]  = convertInputValues();
 
-  const addInputToProfile = () => {
-
-    const [profileName, coverImgURL]  = convertInputValues();
-
-    document.querySelector('.title-cover span').innerHTML = `${profileName}`;
-    document.querySelector('.cover img').setAttribute('src', coverImgURL);
-    
+   document.querySelector('.profile span').innerHTML = `${profileName}`;
+   document.querySelector('.profile img').setAttribute('src', profileImgURL);
+   document.querySelector('.aud').setAttribute('src', profileAudURL);
 
 }
 
@@ -80,16 +82,36 @@ var loadAud = function(event) {
   }
 };
 
-document.querySelector('.btn').addEventListener('click', (e) => {
-    e.preventDefault();
-    addInputToProfile();
-  });
+function showBtn() { 
+
+  var submitBtn = document.getElementById('ulBtn');
+  
+  var btnDisplay = submitBtn.style.display;
+  if(btnDisplay == 'none'){
+    submitBtn.style.display = 'block';
+  } else{
+    submitBtn.style.display = 'none';
+  }
+  }
+
+document.querySelector('#btn').addEventListener('click', (e) => {
+  var ulContent = document.getElementById('uploaded-container');
+  var showContent = ulContent.style.display;
+  if (showContent == 'block'){
+    ulContent.style.display = 'none';
+  }else {
+    ulContent.style.display = 'block';
+  }
+  e.preventDefault();
+  addInputToProfile();
+});
+
 
 /*const songName = [];
 const coverArt = [];
 const sample = [];
 
-const profileName = document.querySelector('input.sample-name').value;
+const sampleName = document.querySelector('input.sample-name').value;
 
 function addSample(imageBlob) {
   sample.push(imageBlob);
