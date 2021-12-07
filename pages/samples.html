@@ -51,7 +51,7 @@
               <audio controls id="previewAud" src="#">
                 Your browser does not support the <code>audio</code> element.
               </audio>
-              <button type="submit" class="btn" id="btn" onclick="showBtn(), addInputToProfile()">Upload</button>
+              <button type="submit" class="btn" id="btn" onclick="showBtn(), addInputToProfile(), resetForm()">Upload</button>
             </form>
           
             
@@ -61,20 +61,6 @@
           <br>
 
           <div id="audio-container" class="sample-grid">
-            <div id = "uploaded-container" class="sample-container hide">
-              <div class="profile cover">
-                <img src="" class="coverimg">
-                <h2><span></span></h2>
-              </div>
-            <figure class="align">
-               <audio class="aud"
-                    controls
-                    src=" ">
-                      Your browser does not support the
-                      <code>audio</code> element.
-                </audio>
-            </figure>
-           </div>
             <div class="sample-container">
               <div id="image" class="cover">
                 <img src="../img/D1.png" class="coverimg">

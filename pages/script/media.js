@@ -48,9 +48,38 @@ const convertInputValues = () => {
 
    const [profileAudURL, profileImgURL, profileName ]  = convertInputValues();
 
-   document.querySelector('.profile span').innerHTML = `${profileName}`;
-   document.querySelector('.profile img').setAttribute('src', profileImgURL);
-   document.querySelector('.aud').setAttribute('src', profileAudURL);
+   var parentDiv = document.createElement('div');
+   parentDiv.className = "sample-container";
+ 
+   var childDiv = document.createElement('div');
+   childDiv.className = "profile cover";
+ 
+   var imgElement = document.createElement('img');
+   imgElement.className = "coverimg";
+   imgElement.setAttribute('src', profileImgURL);
+
+ 
+   var titleElement = document.createElement('h2');
+   var spanElement = document.createElement('span')
+   spanElement.innerHTML = `${profileName}`;
+ 
+   var figureElement = document.createElement('figure');
+   figureElement.className = "align";
+ 
+   var audElement = document.createElement('audio');
+   audElement.className = "aud";
+   audElement.id = "audio";
+   audElement.setAttribute("controls", "controls");
+   audElement.setAttribute('src', profileAudURL);
+   
+   childDiv.appendChild(imgElement);
+   titleElement.appendChild(spanElement);
+   childDiv.appendChild(titleElement);
+   parentDiv.appendChild(childDiv);
+   figureElement.appendChild(audElement);
+   parentDiv.appendChild(figureElement);
+
+   document.getElementById('audio-container').appendChild(parentDiv);
 
 }
 
@@ -95,24 +124,11 @@ function showBtn() {
   }
 
 document.querySelector('#btn').addEventListener('click', (e) => {
-  var ulContent = document.getElementById('uploaded-container');
-  var showContent = ulContent.style.display;
-  if (showContent == 'block'){
-    ulContent.style.display = 'none';
-  }else {
-    ulContent.style.display = 'block';
-  }
-  var parentDiv = document.createElement('div').setAttribute
-  var childDiv = document.createElement('div');
-  var imgElement = document.createElement('img');
-  var titleElement = document.createElement('h2');
-  var spanElement = document.createElement('span')
-  var figureElement = document.createElement('figure');
-  var audElement = document.createElement('audio');
-  document.getElementById('audio-container').appendChild(newElement);
-
   e.preventDefault();
-  addInputToProfile();
 });
+
+function resetForm() {
+  $("#form")[0].reset();
+}
 
 
