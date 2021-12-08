@@ -34,7 +34,7 @@
          <!--put all page content in the div beneath-->
         <div id="navstop"></div>
         <div id="pagecont" class="pagecontentcontainer">
-          <button type="button" class="ulBtn" id="ulBtn" onclick="hideContent(), hideBtn()">Submit a song</button>
+          <button type="button" class="ulBtn" id="ulBtn" onclick="hideContent(), hideBtn(), showSubmitBtn()">Submit a song</button>
           <div id="ul" class="form">
             <form runat="Server" id="form" class="fields hide">
               <input id="field1" type='text' class="profile-name input-style" placeholder="Sample Name">
@@ -43,16 +43,17 @@
               <label for="field2" class="button">Select an image</label>
               <input id="field2" type='file' accept="image/*" class="profile-img input-style" style="visibility:hidden;" placeholder="" onchange="loadImg(event)">
               <br>
-              <img id="previewImg" src="#" alt="your image">
+              <img id="previewImg" src="" alt="your image">
               <br>
               <label for="field3" class="button">Select a track</label>
               <input id="field3" type='file' accept="audio/*" class="profile-aud input-style" style="visibility:hidden;" placeholder="" onchange="loadAud(event)">
               <br>
-              <audio controls id="previewAud" src="#">
+              <audio controls id="previewAud" src="">
                 Your browser does not support the <code>audio</code> element.
               </audio>
-              <button type="submit" class="btn" id="btn" onclick="showBtn(), addInputToProfile(), resetForm()">Upload</button>
+              <button type="submit" class="btn hide2" id="btn" onclick="showBtn(), hideSubmitBtn()">Upload</button>
             </form>
+            
           
             
         </div>

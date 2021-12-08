@@ -23,7 +23,33 @@ var btnDisplay = submitBtn.style.display;
   }
 }
 
+function showSubmitBtn() { 
 
+  var submitBtn = document.getElementById('btn');
+  
+  var btnDisplay = submitBtn.style.display;
+    if(btnDisplay == 'block'){
+      submitBtn.style.display = 'none';
+    } else{
+      submitBtn.style.display = 'block';
+    }
+  }
+
+function hideSubmitBtn() { 
+
+  var submitBtn = document.getElementById('btn');
+  
+  var btnDisplay = submitBtn.style.display;
+    if(btnDisplay == 'none'){
+      submitBtn.style.display = 'block';
+    } else{
+      submitBtn.style.display = 'none';
+    }
+  }
+
+function reset(){
+  document.getElementById("field1").value = null;
+}
 const getValuesFromInputs = () =>{
   const profileName = document.querySelector('#field1').value;
   const profileImg = document.querySelector('#field2').files[0];
@@ -111,6 +137,26 @@ var loadAud = function(event) {
   }
 };
 
+var hideImg = function() {
+  var outputImg = document.getElementById('previewImg');
+  var hideImg = outputImg.style.display;
+    if (hideImg == 'none'){
+      outputImg.style.display = 'block';
+    }else{
+      outputImg.style.display = 'none';
+    }
+};
+
+var hideAud = function() {
+  var outputAud = document.getElementById('previewAud');
+  var hideAud = outputAud.style.display;
+  if (hideAud == 'none'){
+    outputAud.style.display = 'block';
+  }else{
+    outputAud.style.display = 'none';
+  }
+};
+
 function showBtn() { 
 
   var submitBtn = document.getElementById('ulBtn');
@@ -123,12 +169,12 @@ function showBtn() {
   }
   }
 
+
 document.querySelector('#btn').addEventListener('click', (e) => {
   e.preventDefault();
+  addInputToProfile();
+  reset();
+  hideImg();
+  hideAud();
 });
-
-function resetForm() {
-  $("#form")[0].reset();
-}
-
 

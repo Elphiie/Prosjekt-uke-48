@@ -7,17 +7,23 @@
 .form{
     display: block;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
 }
 
 .fields{
     text-align: center;
+    justify-content: center;
 }
 
 .ulBtn{
     text-align: center;
-    margin: 0 46.7%;
-    width: 102px;
+    margin: 0 47.3%;
+    width: 120px;
+    border-radius: 15%;
+    background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
 }
 
 
@@ -35,7 +41,9 @@
     display: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: 43.6%;
+    margin: 0 44.4%;
+    border: oldlace;
+    border-style: ridge;
 }
 
 #previewAud{
@@ -43,7 +51,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    margin-left: 40%;
+    margin-left: 42%;
 }
 
 .upload{
@@ -75,6 +83,7 @@ h2 span{
 }
 
 .coverimg{
+    text-align: center;
     width: 250px;
     height: 250px;
 }
@@ -83,8 +92,20 @@ h2 span{
     text-align: center;
 }
 
+#field1{
+    border-style: ridge;
+    border-radius: 5%;
+    background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
 .btn {
-    transform: translate(0 50%);
+    margin: 0 48.3%;
+    border-radius: 15%;
+    background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
 }
 
 .btn2 {
@@ -92,19 +113,37 @@ h2 span{
 }
 
 .button{
-    border: black;
-    background-color: white;
+    border-style:none;
+    background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
     padding: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
     justify-content: center;
-    margin:0 40%;
+    margin:0 42%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
 }
 
 .button:hover{
-    background-color:silver;
+    background:linear-gradient(to top, #6A8D9F 100%, #CBD1DF 50%);
 }
 
 .button:active{
-    background-color: white;
+    background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
+}
+
+.ulBtn:hover{
+    background:linear-gradient(to top, #6A8D9F 100%, #CBD1DF 50%);
+}
+
+.ulBtn:active{
+    background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
+}
+
+.btn:hover{
+    background:linear-gradient(to top, #6A8D9F 100%, #CBD1DF 50%);
+}
+
+.btn:active{
+    background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
 }
