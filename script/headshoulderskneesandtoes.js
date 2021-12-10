@@ -33,8 +33,9 @@ $.fn.followTo = function ( elem ) {
 
 $('#navbar').followTo('#navstop');
 
+
 //viser hjemmesiden når man trykker på home
-homePage = document.getElementById("test");
+homePage = document.getElementById("home");
 
 var showHome = function () {
   if (homePage.className = 'hidden') {
@@ -42,7 +43,10 @@ var showHome = function () {
   } else {
     homePage.className = "hidden";
   }
+  location.href = ('#home');
 };
+
+
 
 //viser sample-siden når man trykker på sample packs
 samplePage = document.getElementById("samples");
@@ -53,6 +57,7 @@ var showSmplPage = function () {
   } else {
     samplePage.className = "sample-page hidden";
   }
+  location.href = ('#samples');
 };
 
 //viser om-siden når man trykker på about & contakt
@@ -64,6 +69,7 @@ var showAbout = function () {
   } else {
     aboutPage.className = "hidden";
   }
+  location.href = ('#gaming');
 };
 
 
@@ -74,4 +80,20 @@ function HideContent(obj) {
     }
   }
 
+//skjul enter kanppen
+var siteEnter = document.getElementById('enterbtn');
+
+var hideEnterSite = function () {
+  if (siteEnter.className = 'bn1 show') {
+    siteEnter.className = "hidden";
+  } else {
+    siteEnter.className = "bn1 show";
+  }
+};
+
+/*function smoothScrollHome(){
+  document.querySelector('.show').scrollIntoView({
+    behavior: 'smooth'
+  });
+}*/
 

@@ -13,10 +13,10 @@ body, html {
 
 .maincontainer{
   height:100%;
+  min-height: 1000px;
   background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trees.jpg);
   background-position: top center;
-  background-repeat: no-repeat;
-  border:solid 5px green;
+  background-repeat: no-repeat
 }
 
 #navstop{
@@ -29,8 +29,6 @@ body, html {
   margin-right: 10px;
   margin-bottom: 10px;
   padding-top: 50px;
-  
-  border:solid 5px green;
 }
 
 #header .text{

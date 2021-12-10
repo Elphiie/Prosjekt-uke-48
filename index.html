@@ -4,6 +4,7 @@
       <title>E-sport</title>
       <link href="css/css-Index.css" rel="stylesheet">
       <link rel="stylesheet" href="CSS/css-samples.css">
+      <link rel="stylesheet" href="CSS/mainPage.css">
   </head>
     <body>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -11,9 +12,9 @@
         
         <div id="navbar">
           <ul>
-            <li><a id="toHome" href="javascript:HideContent(['samples','gaming'])" onclick="showHome()">Home</a></li>
-            <li><a id="toSamplePage" href="javascript:HideContent(['test','gaming'])" onclick="showSmplPage()">Sample Packs</a></li>
-            <li><a id="toTest" href="javascript:HideContent(['samples','test'])" onclick="showAbout()">About & Contact</a></li>
+            <li><a id="toHome" href="javascript:HideContent(['samples','gaming','notecontainer'])" onclick="showHome(), hideEnterSite()">Home</a></li>
+            <li><a id="toSamplePage" href="javascript:HideContent(['test','gaming'])" onclick="showSmplPage(), hideEnterSite()">Sample Packs</a></li>
+            <li><a id="toTest" href="javascript:HideContent(['samples','test'])" onclick="showAbout(), hideEnterSite()">About & Contact</a></li>
             <li><a href="https://www.link.com" target="_blank">Videos</a></li>
             <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/twitch-tv-16.png" width="16px" height="16px"/></a></li>
             <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/instagram-16.png" width="16px" height="16px"/></a></li>
@@ -25,14 +26,37 @@
          <div id="header">
           <div class="text">
            <h1 style="font-size:50px">QUALITY<br>SAMPLES</h1>
-            <br>
-             <a href="https://www.link.com" class="bn1">Find out more</a>
+          </div>
+          <div id="enterbtn"><a href="#home" class="bn1" onclick="showHome(), hideEnterSite()">Enter Site</a></div>
+        </div>
+        <div id="notecontainer" class="notecontainer">
+          <div class="clef"><img src="img/clef.png" style="height: 100%;"></div>
+          <div class="note1-outline">
+              <div class="note1"><img src="img/note0.png" style="height: 100%;"></div>
+          </div>
+          <div class="note2-outline">
+            <div class="note2"><img src="img/note5.png" style="height: 100%;"></div>
+          </div>
+          <div class="note3-outline">
+              <div class="note3"><img src="img/note2.png" style="height: 100%;"></div>
+          </div>
+          <div class="note4-outline">
+              <div class="note4"><img src="img/note1.png" style="height: 100%;"></div>
+          </div>
+          <div class="note5-outline">
+              <div class="note5"><img src="img/note0.png" style="height: 100%;"></div>
+          </div>
+          <div class="note6-outline">
+              <div class="note6"><img src="img/note4.png" style="height: 100%;"></div>
+          </div>
+          <div class="note7-outline">
+              <div class="note7"><img src="img/note1.png" style="height: 100%;"></div>
           </div>
         </div>
          <!--put all page content in the div beneath-->
          <div id="navstop"></div>
         <div id="pagecont" class="pagecontentcontainer">
-          <div id="test" class="show home-page">
+          <div id="home" class="hidden home-page">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, mauris id pellentesque pharetra, elit justo interdum eros, at aliquam massa felis vel sem. Praesent ornare malesuada lectus, malesuada ultrices lorem viverra eget. In hac habitasse platea dictumst. Nunc ac pellentesque augue, sit amet tincidunt nisl. Ut id est non nisl maximus fermentum vitae id nunc. Nam scelerisque leo pretium nisl facilisis, at sodales magna egestas. Suspendisse a consectetur mauris, finibus congue orci.
 
 Nullam scelerisque laoreet sem tempor hendrerit. Integer et tortor et arcu euismod pretium nec efficitur sapien. Praesent tincidunt posuere nisl vel interdum. Vestibulum finibus metus in neque pulvinar, eu ultricies neque auctor. Praesent in odio ultrices risus congue mattis ac vel ante. Vestibulum ut urna ultrices, ultricies justo ac, malesuada dolor. Sed eleifend dapibus dui sit amet aliquet. Vivamus dui risus, auctor venenatis interdum vitae, placerat sit amet lorem. Cras facilisis velit sit amet ligula finibus, in accumsan magna maximus. Cras tempor eu felis at commodo. Praesent laoreet rutrum quam, nec viverra libero finibus sed. Donec quis turpis eget diam hendrerit consectetur at eget odio. Aenean rutrum, libero sed pharetra convallis, sapien leo feugiat eros, vitae pharetra neque nisl nec leo.
@@ -65,7 +89,7 @@ Donec finibus convallis purus sit amet faucibus. Integer at tellus nec lorem eui
         </div>
           <div id="samples" class="sample-page hidden">
           <div id="form-container" class="form">
-            <button type="button" class="ulBtn" id="ulBtn" onclick="hideContent(), hideBtn(), showSubmitBtn()">SUBMIT SAMPLE</button>
+            <div class=""><button type="button"id="ulBtn" onclick="hideContent(), hideBtn(), showSubmitBtn()">SUBMIT SAMPLE</button></div>
             <div id="ul">
               <form runat="Server" id="form" class="fields hide">
                 <input id="field1" type='text' class="profile-name input-style" placeholder="Sample Name">
@@ -83,7 +107,7 @@ Donec finibus convallis purus sit amet faucibus. Integer at tellus nec lorem eui
                 <audio controls id="previewAud" src="">
                   Your browser does not support the <code>audio</code> element.
                 </audio>
-                <button type="submit" class="btn hide2" id="btn" onclick="showBtn(), hideSubmitBtn()"><img src="../img/Upload.png" alt="" style="width: 50px; mix-blend-mode: multiply;"></button>
+                <button type="submit" class="btn hide2" id="btn" onclick="showBtn(), hideSubmitBtn()"><img src="img/Upload.png" alt="" style="width: 50px; mix-blend-mode: multiply;"></button>
               </form>
             </div>      
           </div> 

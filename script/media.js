@@ -184,9 +184,8 @@ function showBtn() {
   }
   }
 
-
+//når man trykker på upload så kjøres disse funksjonene:
 document.querySelector('#btn').addEventListener('click', (e) => {
-  //når man trykker på upload så kjøres disse funksjonene:
   e.preventDefault();
   addInputToProfile();
   reset();
