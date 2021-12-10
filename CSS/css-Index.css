@@ -7,24 +7,28 @@ body, html {
   background-size:contain;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100%;
-  margin: 0px;
+  margin:0px;
   padding: 0;
 }
 
 .maincontainer{
-  height:1800px;
+  height:100%;
+  min-height: 1000px;
   background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trees.jpg);
   background-position: top center;
-  background-repeat: no-repeat;
-  border:solid 5px green;
+  background-repeat: no-repeat
 }
+
+#navstop{
+  margin-bottom: -100px;
+}
+
 .pagecontentcontainer{
-  margin-top:300px;
+  margin-top:150px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  height:1100px;
-  border:solid 5px green;
+  padding-top: 50px;
 }
 
 #header .text{
@@ -33,13 +37,13 @@ body, html {
     right: 50px;
     top:0px;
     padding: 5px;
+    padding-top: 82px;
     color: white;
 }
 
 /* Navigation bar start*/
 #navbar{
   overflow: hidden;
-  position:fixed;
   justify-content: center;
   width:100%;
   top:0px;
