@@ -34,33 +34,31 @@
          <!--put all page content in the div beneath-->
         <div id="navstop"></div>
         <div id="pagecont" class="pagecontentcontainer">
-          <button type="button" class="ulBtn" id="ulBtn" onclick="hideContent(), hideBtn(), showSubmitBtn()">Submit a song</button>
-          <div id="ul" class="form">
-            <form runat="Server" id="form" class="fields hide">
-              <input id="field1" type='text' class="profile-name input-style" placeholder="Sample Name">
-              <br>
-              <br>
-              <label for="field2" class="button">Select an image</label>
-              <input id="field2" type='file' accept="image/*" class="profile-img input-style" style="visibility:hidden;" placeholder="" onchange="loadImg(event)">
-              <br>
-              <img id="previewImg" src="" alt="your image">
-              <br>
-              <label for="field3" class="button">Select a track</label>
-              <input id="field3" type='file' accept="audio/*" class="profile-aud input-style" style="visibility:hidden;" placeholder="" onchange="loadAud(event)">
-              <br>
-              <audio controls id="previewAud" src="">
-                Your browser does not support the <code>audio</code> element.
-              </audio>
-              <button type="submit" class="btn hide2" id="btn" onclick="showBtn(), hideSubmitBtn()">Upload</button>
-            </form>
-            
-          
-            
-        </div>
-    
+          <div id="form-container" class="form">
+            <button type="button" class="ulBtn" id="ulBtn" onclick="hideContent(), hideBtn(), showSubmitBtn()">SUBMIT SAMPLE</button>
+            <div id="ul">
+              <form runat="Server" id="form" class="fields hide">
+                <input id="field1" type='text' class="profile-name input-style" placeholder="Sample Name">
+                <br>
+                <br>
+                <label for="field2" class="button">COVER ART</label>
+                <br>
+                <input id="field2" type='file' accept="image/*" class="profile-img input-style" style="visibility:hidden;" placeholder="" onchange="loadImg(event)">
+                <br>
+                <img id="previewImg" src="" alt="your image">
+                <br>
+                <label for="field3" class="button">SAMPLE</label>
+                <br>
+                <input id="field3" type='file' accept="audio/*" class="profile-aud input-style" style="visibility:hidden;" placeholder="" onchange="loadAud(event)">
+                <audio controls id="previewAud" src="">
+                  Your browser does not support the <code>audio</code> element.
+                </audio>
+                <button type="submit" class="btn hide2" id="btn" onclick="showBtn(), hideSubmitBtn()"><img src="../img/Upload.png" alt="" style="width: 50px; mix-blend-mode: multiply;"></button>
+              </form>
+            </div>      
+          </div> 
           <br>
           <br>
-
           <div id="audio-container" class="sample-grid">
             <div class="sample-container">
               <div id="image" class="cover">
@@ -206,6 +204,6 @@
      </div>
     </div>
     <script type="text/javascript" src="../script/headshoulderskneesandtoes.js"></script>
-    <script type="text/javascript" src="script/media.js"></script>
+    <script type="text/javascript" src="pages/script/media.js"></script>
   </body>
 </html>

@@ -1,3 +1,26 @@
+.home-page{
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.sample-page{
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.hidden {
+    display: none;
+    opacity:0;
+}
+
+.show {
+    display: block;
+    opacity:1;
+}
+
 .sample-grid{
     display: grid;
     grid-auto-columns: 3;
@@ -5,8 +28,9 @@
 }
 
 .form{
-    display: block;
-    flex-direction: column;
+    display: grid;
+    grid-auto-columns: 1;
+    grid-template-columns: auto;
     text-align: center;
     justify-content: center;
 }
@@ -17,9 +41,7 @@
 }
 
 .ulBtn{
-    text-align: center;
-    margin: 0 47.3%;
-    width: 120px;
+    justify-items: center;
     border-radius: 15%;
     background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
     font-family: Arial, Helvetica, sans-serif;
@@ -37,13 +59,13 @@
 }
 
 #previewImg{
-    width: 200px;
+    text-align: center;
+    width: 250px;
+    height: 250px;
     display: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin: 0 44.4%;
-    border: oldlace;
-    border-style: ridge;
+    justify-items: center;
 }
 
 #previewAud{
@@ -51,11 +73,10 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    margin-left: 42%;
+    justify-content: center;
 }
 
 .upload{
-    display:grid;
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -93,19 +114,21 @@ h2 span{
 }
 
 #field1{
+    display: inline-block;
     border-style: ridge;
     border-radius: 5%;
     background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
+    margin: auto;
 }
 
 .btn {
-    margin: 0 48.3%;
     border-radius: 15%;
     background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
+    margin: auto;
 }
 
 .btn2 {
@@ -115,13 +138,14 @@ h2 span{
 .button{
     border-style:none;
     background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
+    margin: auto;
     padding: 2px;
     padding-left: 5px;
     padding-right: 5px;
+    border-radius: 15%;
     justify-content: center;
-    margin:0 42%;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .button:hover{

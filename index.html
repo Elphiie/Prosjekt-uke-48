@@ -3,6 +3,7 @@
   <head>
       <title>E-sport</title>
       <link href="css/css-Index.css" rel="stylesheet">
+      <link rel="stylesheet" href="CSS/css-samples.css">
   </head>
     <body>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -10,9 +11,9 @@
         
         <div id="navbar">
           <ul>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="https://www.link.com">Sample Packs</a></li>
-            <li><a href="https://www.link.com" target="_blank">About & Contact</a></li>
+            <li><a id="toHome" href="javascript:HideContent(['samples','gaming'])" onclick="showHome()">Home</a></li>
+            <li><a id="toSamplePage" href="javascript:HideContent(['test','gaming'])" onclick="showSmplPage()">Sample Packs</a></li>
+            <li><a id="toTest" href="javascript:HideContent(['samples','test'])" onclick="showAbout()">About & Contact</a></li>
             <li><a href="https://www.link.com" target="_blank">Videos</a></li>
             <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/twitch-tv-16.png" width="16px" height="16px"/></a></li>
             <li class="socialmediaicons"><a href="https://www.link.com"><img src="img/instagram-16.png" width="16px" height="16px"/></a></li>
@@ -27,13 +28,312 @@
             <br>
              <a href="https://www.link.com" class="bn1">Find out more</a>
           </div>
-
-         </div>
+        </div>
          <!--put all page content in the div beneath-->
          <div id="navstop"></div>
         <div id="pagecont" class="pagecontentcontainer">
-          
+          <div id="test" class="show home-page">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, mauris id pellentesque pharetra, elit justo interdum eros, at aliquam massa felis vel sem. Praesent ornare malesuada lectus, malesuada ultrices lorem viverra eget. In hac habitasse platea dictumst. Nunc ac pellentesque augue, sit amet tincidunt nisl. Ut id est non nisl maximus fermentum vitae id nunc. Nam scelerisque leo pretium nisl facilisis, at sodales magna egestas. Suspendisse a consectetur mauris, finibus congue orci.
+
+Nullam scelerisque laoreet sem tempor hendrerit. Integer et tortor et arcu euismod pretium nec efficitur sapien. Praesent tincidunt posuere nisl vel interdum. Vestibulum finibus metus in neque pulvinar, eu ultricies neque auctor. Praesent in odio ultrices risus congue mattis ac vel ante. Vestibulum ut urna ultrices, ultricies justo ac, malesuada dolor. Sed eleifend dapibus dui sit amet aliquet. Vivamus dui risus, auctor venenatis interdum vitae, placerat sit amet lorem. Cras facilisis velit sit amet ligula finibus, in accumsan magna maximus. Cras tempor eu felis at commodo. Praesent laoreet rutrum quam, nec viverra libero finibus sed. Donec quis turpis eget diam hendrerit consectetur at eget odio. Aenean rutrum, libero sed pharetra convallis, sapien leo feugiat eros, vitae pharetra neque nisl nec leo.
+
+Phasellus porttitor mauris non ultricies mattis. Sed arcu justo, semper eget ex id, posuere finibus lectus. Suspendisse tempus egestas rhoncus. Suspendisse feugiat venenatis tincidunt. Ut porttitor feugiat dui vel fringilla. Nam et ante enim. Suspendisse nisl erat, dignissim sed dolor vitae, iaculis consequat eros. Maecenas sed dolor mauris. Praesent porttitor cursus leo id commodo. Morbi in fermentum sem, at malesuada neque. Donec convallis, erat at aliquam sollicitudin, metus turpis tincidunt nunc, vel semper ante tortor ut elit.
+
+Quisque vehicula facilisis nulla a sagittis. Aenean at enim faucibus, porta lectus in, varius neque. Suspendisse dapibus risus sit amet auctor varius. Pellentesque egestas velit in velit semper, sed faucibus diam congue. Sed fringilla gravida neque, cursus vehicula nisl pulvinar non. Donec dolor eros, iaculis non ipsum in, maximus sollicitudin leo. Etiam nunc nunc, ultrices a urna non, suscipit vestibulum ligula. Sed nec neque et felis rutrum tempor vel sed elit. Morbi eget suscipit enim. Mauris at tellus eget lacus cursus scelerisque eu in purus. Sed placerat libero id dolor mollis, non laoreet neque aliquam. Proin posuere nulla vitae massa hendrerit, eget rhoncus magna vestibulum. Nulla pulvinar at urna nec tristique.
+
+Donec finibus convallis purus sit amet faucibus. Integer at tellus nec lorem euismod tristique suscipit vel risus. Proin ante nulla, imperdiet ut iaculis pharetra, tempus vitae ex. Nulla vitae sagittis leo. Vestibulum nunc lectus, fermentum ut ipsum vitae, volutpat facilisis orci. Maecenas porta eros ante, in porta nisl congue eget. Proin elit purus, aliquet vitae feugiat vel, ultricies quis nunc. Maecenas sapien felis, cursus quis est id, convallis convallis diam. Sed lacinia ultrices sem at aliquam. Etiam sit amet consequat nulla. Fusce vel porttitor ligula. Duis laoreet lobortis sapien in semper. Aliquam erat volutpat. Duis ornare, neque sit amet ornare suscipit, quam magna lacinia velit, ut
+    
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, mauris id pellentesque pharetra, elit justo interdum eros, at aliquam massa felis vel sem. Praesent ornare malesuada lectus, malesuada ultrices lorem viverra eget. In hac habitasse platea dictumst. Nunc ac pellentesque augue, sit amet tincidunt nisl. Ut id est non nisl maximus fermentum vitae id nunc. Nam scelerisque leo pretium nisl facilisis, at sodales magna egestas. Suspendisse a consectetur mauris, finibus congue orci.
+
+Nullam scelerisque laoreet sem tempor hendrerit. Integer et tortor et arcu euismod pretium nec efficitur sapien. Praesent tincidunt posuere nisl vel interdum. Vestibulum finibus metus in neque pulvinar, eu ultricies neque auctor. Praesent in odio ultrices risus congue mattis ac vel ante. Vestibulum ut urna ultrices, ultricies justo ac, malesuada dolor. Sed eleifend dapibus dui sit amet aliquet. Vivamus dui risus, auctor venenatis interdum vitae, placerat sit amet lorem. Cras facilisis velit sit amet ligula finibus, in accumsan magna maximus. Cras tempor eu felis at commodo. Praesent laoreet rutrum quam, nec viverra libero finibus sed. Donec quis turpis eget diam hendrerit consectetur at eget odio. Aenean rutrum, libero sed pharetra convallis, sapien leo feugiat eros, vitae pharetra neque nisl nec leo.
+
+Phasellus porttitor mauris non ultricies mattis. Sed arcu justo, semper eget ex id, posuere finibus lectus. Suspendisse tempus egestas rhoncus. Suspendisse feugiat venenatis tincidunt. Ut porttitor feugiat dui vel fringilla. Nam et ante enim. Suspendisse nisl erat, dignissim sed dolor vitae, iaculis consequat eros. Maecenas sed dolor mauris. Praesent porttitor cursus leo id commodo. Morbi in fermentum sem, at malesuada neque. Donec convallis, erat at aliquam sollicitudin, metus turpis tincidunt nunc, vel semper ante tortor ut elit.
+
+Quisque vehicula facilisis nulla a sagittis. Aenean at enim faucibus, porta lectus in, varius neque. Suspendisse dapibus risus sit amet auctor varius. Pellentesque egestas velit in velit semper, sed faucibus diam congue. Sed fringilla gravida neque, cursus vehicula nisl pulvinar non. Donec dolor eros, iaculis non ipsum in, maximus sollicitudin leo. Etiam nunc nunc, ultrices a urna non, suscipit vestibulum ligula. Sed nec neque et felis rutrum tempor vel sed elit. Morbi eget suscipit enim. Mauris at tellus eget lacus cursus scelerisque eu in purus. Sed placerat libero id dolor mollis, non laoreet neque aliquam. Proin posuere nulla vitae massa hendrerit, eget rhoncus magna vestibulum. Nulla pulvinar at urna nec tristique.
+
+Donec finibus convallis purus sit amet faucibus. Integer at tellus nec lorem euismod tristique suscipit vel risus. Proin ante nulla, imperdiet ut iaculis pharetra, tempus vitae ex. Nulla vitae sagittis leo. Vestibulum nunc lectus, fermentum ut ipsum vitae, volutpat facilisis orci. Maecenas porta eros ante, in porta nisl congue eget. Proin elit purus, aliquet vitae feugiat vel, ultricies quis nunc. Maecenas sapien felis, cursus quis est id, convallis convallis diam. Sed lacinia ultrices sem at aliquam. Etiam sit amet consequat nulla. Fusce vel porttitor ligula. Duis laoreet lobortis sapien in semper. Aliquam erat volutpat. Duis ornare, neque sit amet ornare suscipit, quam magna lacinia velit, ut
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, mauris id pellentesque pharetra, elit justo interdum eros, at aliquam massa felis vel sem. Praesent ornare malesuada lectus, malesuada ultrices lorem viverra eget. In hac habitasse platea dictumst. Nunc ac pellentesque augue, sit amet tincidunt nisl. Ut id est non nisl maximus fermentum vitae id nunc. Nam scelerisque leo pretium nisl facilisis, at sodales magna egestas. Suspendisse a consectetur mauris, finibus congue orci.
+
+Nullam scelerisque laoreet sem tempor hendrerit. Integer et tortor et arcu euismod pretium nec efficitur sapien. Praesent tincidunt posuere nisl vel interdum. Vestibulum finibus metus in neque pulvinar, eu ultricies neque auctor. Praesent in odio ultrices risus congue mattis ac vel ante. Vestibulum ut urna ultrices, ultricies justo ac, malesuada dolor. Sed eleifend dapibus dui sit amet aliquet. Vivamus dui risus, auctor venenatis interdum vitae, placerat sit amet lorem. Cras facilisis velit sit amet ligula finibus, in accumsan magna maximus. Cras tempor eu felis at commodo. Praesent laoreet rutrum quam, nec viverra libero finibus sed. Donec quis turpis eget diam hendrerit consectetur at eget odio. Aenean rutrum, libero sed pharetra convallis, sapien leo feugiat eros, vitae pharetra neque nisl nec leo.
+
+Phasellus porttitor mauris non ultricies mattis. Sed arcu justo, semper eget ex id, posuere finibus lectus. Suspendisse tempus egestas rhoncus. Suspendisse feugiat venenatis tincidunt. Ut porttitor feugiat dui vel fringilla. Nam et ante enim. Suspendisse nisl erat, dignissim sed dolor vitae, iaculis consequat eros. Maecenas sed dolor mauris. Praesent porttitor cursus leo id commodo. Morbi in fermentum sem, at malesuada neque. Donec convallis, erat at aliquam sollicitudin, metus turpis tincidunt nunc, vel semper ante tortor ut elit.
+
+Quisque vehicula facilisis nulla a sagittis. Aenean at enim faucibus, porta lectus in, varius neque. Suspendisse dapibus risus sit amet auctor varius. Pellentesque egestas velit in velit semper, sed faucibus diam congue. Sed fringilla gravida neque, cursus vehicula nisl pulvinar non. Donec dolor eros, iaculis non ipsum in, maximus sollicitudin leo. Etiam nunc nunc, ultrices a urna non, suscipit vestibulum ligula. Sed nec neque et felis rutrum tempor vel sed elit. Morbi eget suscipit enim. Mauris at tellus eget lacus cursus scelerisque eu in purus. Sed placerat libero id dolor mollis, non laoreet neque aliquam. Proin posuere nulla vitae massa hendrerit, eget rhoncus magna vestibulum. Nulla pulvinar at urna nec tristique.
+
+Donec finibus convallis purus sit amet faucibus. Integer at tellus nec lorem euismod tristique suscipit vel risus. Proin ante nulla, imperdiet ut iaculis pharetra, tempus vitae ex. Nulla vitae sagittis leo. Vestibulum nunc lectus, fermentum ut ipsum vitae, volutpat facilisis orci. Maecenas porta eros ante, in porta nisl congue eget. Proin elit purus, aliquet vitae feugiat vel, ultricies quis nunc. Maecenas sapien felis, cursus quis est id, convallis convallis diam. Sed lacinia ultrices sem at aliquam. Etiam sit amet consequat nulla. Fusce vel porttitor ligula. Duis laoreet lobortis sapien in semper. Aliquam erat volutpat. Duis ornare, neque sit amet ornare suscipit, quam magna lacinia velit, ut
         </div>
+          <div id="samples" class="sample-page hidden">
+          <div id="form-container" class="form">
+            <button type="button" class="ulBtn" id="ulBtn" onclick="hideContent(), hideBtn(), showSubmitBtn()">SUBMIT SAMPLE</button>
+            <div id="ul">
+              <form runat="Server" id="form" class="fields hide">
+                <input id="field1" type='text' class="profile-name input-style" placeholder="Sample Name">
+                <br>
+                <br>
+                <label for="field2" class="button">COVER ART</label>
+                <br>
+                <input id="field2" type='file' accept="image/*" class="profile-img input-style" style="visibility:hidden;" placeholder="" onchange="loadImg(event)">
+                <br>
+                <img id="previewImg" src="" alt="your image">
+                <br>
+                <label for="field3" class="button">SAMPLE</label>
+                <br>
+                <input id="field3" type='file' accept="audio/*" class="profile-aud input-style" style="visibility:hidden;" placeholder="" onchange="loadAud(event)">
+                <audio controls id="previewAud" src="">
+                  Your browser does not support the <code>audio</code> element.
+                </audio>
+                <button type="submit" class="btn hide2" id="btn" onclick="showBtn(), hideSubmitBtn()"><img src="../img/Upload.png" alt="" style="width: 50px; mix-blend-mode: multiply;"></button>
+              </form>
+            </div>      
+          </div> 
+          <br>
+          <br>
+          <div id="audio-container" class="sample-grid">
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+            
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+
+            <div class="sample-container">
+              <div id="image" class="cover">
+                <img src="../img/D1.png" class="coverimg">
+                <h2><span>Testing</span></h2>
+              </div>
+                <figure>
+                  <audio class="aud"
+                      controls
+                      src="../media/Epic beat.mp3">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+            </div>
+          </div>
+        </div>
+        <div id="gaming" class="gaming hidden">
+      <ul class="main-nav">
+  <li class="item1"><a href="#carpe">
+    <div class="bg", "playername"><p>Carpe</p></div>
+  </li>
+  <li class="item2"><a href="#decay">
+    <div class="bg", "playername"><p>Decay</p></div>
+  </li>
+  <li class="item3"><a href="#assassin">
+    <div class="bg", "playername"><p>Assassin</p></div>
+  </li>
+  <li class="item4"><a href="#fury">
+    <div class="bg", "playername"><p>Fury</p></div>
+  </li>
+  <li class="item5"><a href="#profit">
+    <div class="bg", "playername"><p>Profit</p></div>
+  </li>
+</ul>
+
+    <div class=gradient></div>
+
+  <div class="section2">
+      <div class="text"><h1 id="carpe">Carpe</h1>
+      <p><img src="bilder/carpe.png">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+       Excepteur sint occaecat cupidatat non proident,
+       sunt in culpa qui officia deserunt mollit anim id est laborum.
+       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+       totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+       Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+       consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+       quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+       Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+       vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+     </div>
+       <div class=gradient></div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <div class="text"><h1 id="decay">Decay</h1>
+     <p><img src="bilder/decay.png">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+      Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+      consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+      quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+      Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+      vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+    </div>
+      <div class=gradient></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="text"><h1 id="assassin">Assassin</h1>
+    <p><img src="bilder/Assassin.png">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+     Excepteur sint occaecat cupidatat non proident,
+     sunt in culpa qui officia deserunt mollit anim id est laborum.
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+     Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+     consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+     quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+     Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+     vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+   </div>
+     <div class=gradient></div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="text"><h1 id="fury">Fury</h1>
+   <p><img src="bilder/Fury.png">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident,
+    sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+    quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+  </div>
+  <div class=gradient></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="text"><h1 id="profit">Profit</h1>
+  <p><img src="bilder/Profit.png">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+   Excepteur sint occaecat cupidatat non proident,
+   sunt in culpa qui officia deserunt mollit anim id est laborum.
+   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+   totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+   Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+   Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+   consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+   quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+   Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+   vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+ </div>
+<div class=gradient></div>
+</div>
+        </div>
+        </div>
+        <a href="#test">Home</a></li>
+    </div>
 
           <div id="footer">
             <ul class="about">
@@ -53,9 +353,10 @@
                 <li><a href="https://www.link.com">E-Mail</a></li>
                 <li><a href="https://www.link.com">Telephone</a></li>
                 <li><a href="https://www.link.com">Fax</a></li>
-               </ul>
-           </div>
-     </div>
+              </ul>
+          </div>
+       </div>
      <script type="text/javascript" src="script/headshoulderskneesandtoes.js"></script>
+     <script type="text/javascript" src="script/media.js"></script>
   </body>
 </html>

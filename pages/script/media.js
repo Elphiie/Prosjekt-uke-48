@@ -1,55 +1,63 @@
+
+//for å skjule opplastningskjemaet til man trykker på submit sample
 function hideContent() {
 var loadup = document.getElementById('form');
 
 var displaySetting = loadup.style.display;
 
-  if (displaySetting == 'block'){
+  if (displaySetting == 'grid'){
       loadup.style.display = 'none';
   } else {
-      loadup.style.display = 'block';
+      loadup.style.display = 'grid';
   }
 };
 
-
+//skjuler submit sample knappen når den trykkes på
 function hideBtn() { 
 
 var submitBtn = document.getElementById('ulBtn');
 
 var btnDisplay = submitBtn.style.display;
   if(btnDisplay == 'none'){
-    submitBtn.style.display = 'block';
+    submitBtn.style.display = 'grid';
   } else{
     submitBtn.style.display = 'none';
   }
 }
 
+
+//viser upload knappen når funksjonen kjøres av submit sample knappen
 function showSubmitBtn() { 
 
   var submitBtn = document.getElementById('btn');
   
   var btnDisplay = submitBtn.style.display;
-    if(btnDisplay == 'block'){
+    if(btnDisplay == 'grid'){
       submitBtn.style.display = 'none';
     } else{
-      submitBtn.style.display = 'block';
+      submitBtn.style.display = 'grid';
     }
   }
 
+//skjuler upload knappen når den blir trykket på
 function hideSubmitBtn() { 
 
   var submitBtn = document.getElementById('btn');
   
   var btnDisplay = submitBtn.style.display;
     if(btnDisplay == 'none'){
-      submitBtn.style.display = 'block';
+      submitBtn.style.display = 'grid';
     } else{
       submitBtn.style.display = 'none';
     }
   }
 
+//tilbakestiller skjemaet
 function reset(){
   document.getElementById("field1").value = null;
 }
+
+//henter verdiene som blir satt inn i skjemaet
 const getValuesFromInputs = () =>{
   const profileName = document.querySelector('#field1').value;
   const profileImg = document.querySelector('#field2').files[0];
@@ -61,6 +69,8 @@ const getValuesFromInputs = () =>{
 
 }
 
+
+//gjør verdiene om til en URL som kan leses og vises i nettleseren
 const convertInputValues = () => {
    const [profileName, profileImg, profileAud] = getValuesFromInputs();
  
@@ -70,10 +80,11 @@ const convertInputValues = () => {
    return[profileAudURL, profileImgURL, profileName ]
  }
 
+//lager elementet med verdiene fra convertInputValues
  const addInputToProfile = () => {
 
    const [profileAudURL, profileImgURL, profileName ]  = convertInputValues();
-
+   
    var parentDiv = document.createElement('div');
    parentDiv.className = "sample-container";
  
@@ -98,6 +109,7 @@ const convertInputValues = () => {
    audElement.setAttribute("controls", "controls");
    audElement.setAttribute('src', profileAudURL);
    
+   //setter elementet som ble laget inn i siden
    childDiv.appendChild(imgElement);
    titleElement.appendChild(spanElement);
    childDiv.appendChild(titleElement);
@@ -109,39 +121,42 @@ const convertInputValues = () => {
 
 }
 
+//forhåndsvisning av bilde funksjon
 var loadImg = function(event) {
   var outputImg = document.getElementById('previewImg');
   var hideImg = outputImg.style.display;
   outputImg.src = URL.createObjectURL(event.target.files[0]);
   outputImg.onload = function() {
     URL.revokeObjectURL(outputImg.src)// free memory
-    if (hideImg == 'block'){
+    if (hideImg == 'grid'){
       outputImg.style.display = 'none';
     }else{
-      outputImg.style.display = 'block';
+      outputImg.style.display = 'grid';
     }
   }
 };
 
+//forhåndsvisning av lyd funksjon
 var loadAud = function(event) {
   var outputAud = document.getElementById('previewAud');
   var hideAud = outputAud.style.display;
   outputAud.src = URL.createObjectURL(event.target.files[0]);
-  if (hideAud == 'block'){
+  if (hideAud == 'grid'){
     outputAud.style.display = 'none';
   }else{
-    outputAud.style.display = 'block';
+    outputAud.style.display = 'grid';
   }
   outputAud.onload = function() {
     URL.revokeObjectURL(outputAud.src)// free memory
   }
 };
 
+
 var hideImg = function() {
   var outputImg = document.getElementById('previewImg');
   var hideImg = outputImg.style.display;
     if (hideImg == 'none'){
-      outputImg.style.display = 'block';
+      outputImg.style.display = 'grid';
     }else{
       outputImg.style.display = 'none';
     }
@@ -151,7 +166,7 @@ var hideAud = function() {
   var outputAud = document.getElementById('previewAud');
   var hideAud = outputAud.style.display;
   if (hideAud == 'none'){
-    outputAud.style.display = 'block';
+    outputAud.style.display = 'grid';
   }else{
     outputAud.style.display = 'none';
   }
@@ -163,7 +178,7 @@ function showBtn() {
   
   var btnDisplay = submitBtn.style.display;
   if(btnDisplay == 'none'){
-    submitBtn.style.display = 'block';
+    submitBtn.style.display = 'grid';
   } else{
     submitBtn.style.display = 'none';
   }
@@ -171,6 +186,7 @@ function showBtn() {
 
 
 document.querySelector('#btn').addEventListener('click', (e) => {
+  //når man trykker på upload så kjøres disse funksjonene:
   e.preventDefault();
   addInputToProfile();
   reset();
