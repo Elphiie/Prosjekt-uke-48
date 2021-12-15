@@ -19,12 +19,17 @@
   position:absolute;
   text-align: center;
   width:100%;
-  margin-top: 350px;
+  margin-top: 400px;
   color: white;
   overflow: hidden;
   z-index: 1;
 }
-
+.notecontainer img {
+    filter: drop-shadow(1px 1px 1px #fff);
+}
+.notecontainer .clef img {
+    filter: drop-shadow(2px 2px 2px #fff);
+}
  .clef{
   display:flex;
   justify-content: center;
@@ -61,8 +66,8 @@
   width:200px;
 }
 @keyframes orbit3{
-  from{transform:rotate(0deg)translatex(100px) rotate(0deg);}
-  to{transform:rotate(360deg)translatex(100px) rotate(-360deg);}
+  from{transform:rotate(0deg)translatex(-100px) rotate(0deg);}
+  to{transform:rotate(360deg)translatex(-100px) rotate(-360deg);}
 }
 
 .note2{
@@ -103,8 +108,8 @@
   width:370px;
 }
 @keyframes orbit6{
-  from{transform:rotate(0deg)translatex(185px) rotate(0deg);}
-  to{transform:rotate(360deg)translatex(185px) rotate(-360deg);}
+  from{transform:rotate(0deg)translatey(185px) rotate(0deg);}
+  to{transform:rotate(360deg)translatey(185px) rotate(-360deg);}
 }
 
 .note4{
@@ -124,8 +129,8 @@
   width:430px;
 }
 @keyframes orbit7{
-  from{transform:rotate(0deg)translatex(217px) rotate(0deg);}
-  to{transform:rotate(360deg)translatex(217px) rotate(-360deg);}
+  from{transform:rotate(0deg)translatex(-217px) rotate(0deg);}
+  to{transform:rotate(360deg)translatex(-217px) rotate(-360deg);}
 }
 
 .note5{
@@ -138,15 +143,15 @@
   left:40%;
   top: 40%;
   transform: translate(-50%,-50%);
-  animation:orbit8 80s linear infinite;
+  animation:orbit8 70s linear infinite;
 }
 .note5-outline{
   height:500px;
   width:500px;
 }
 @keyframes orbit8{
-  from{transform:rotate(0deg)translatex(250px) rotate(0deg);}
-  to{transform:rotate(360deg)translatex(250px) rotate(-360deg);}
+  from{transform:rotate(0deg)translatey(-250px) rotate(0deg);}
+  to{transform:rotate(360deg)translatey(-250px) rotate(-360deg);}
 }
 
 .note6{
@@ -159,7 +164,7 @@
   left:44%;
   top: 44%;
   transform: translate(-50%,-50%);
-  animation:orbit9 120s linear infinite;
+  animation:orbit9 100s linear infinite;
 }
 .note6-outline{
   height:560px;
@@ -187,6 +192,6 @@
   width:620px;
 }
 @keyframes orbit10{
-  from{transform:rotate(0deg)translatex(310px) rotate(0deg);}
-  to{transform:rotate(360deg)translatex(310px) rotate(-360deg);}
+  from{transform:rotate(0deg)translatey(310px) rotate(0deg);}
+  to{transform:rotate(360deg)translatey(310px) rotate(-360deg);}
 }

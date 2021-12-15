@@ -1,7 +1,7 @@
 body, html {
   display:flex;
   flex-direction:column;
-  background:linear-gradient(to top, #6A8D9F 0%, #CBD1DF 29%);
+  background:linear-gradient(to top, #CBD1DF 0%, #CBD1DF 70%);
   background-repeat: repeat;
   background-position: bottom center;
   background-size:contain;
@@ -13,22 +13,72 @@ body, html {
 
 .maincontainer{
   height:100%;
-  min-height: 1000px;
+  min-height: 1050px;
   background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trees.jpg);
   background-position: top center;
   background-repeat: no-repeat
 }
 
-#navstop{
-  margin-bottom: -100px;
-}
-
 .pagecontentcontainer{
-  margin-top:150px;
+  margin-top:0px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 10px;
-  padding-top: 50px;
+  margin-bottom: 200px;
+}
+
+#about-contact{
+  display: static;
+  overflow: hidden;
+}
+
+#home{
+  background-size: cover;
+  width:100%;
+  min-height: 800px;
+  overflow:hidden;
+}
+#home h1{
+  position:static;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+#home pre {
+  line-height: 1.7;
+  color: white;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 20px;
+}
+#home p {
+  line-height: 1.7;
+  color: white;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 20px;
+}
+
+#divhome1{
+  float:left;
+  background:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  width:40%;
+  height:400px;
+    margin-top:100px;
+  overflow:hidden;
+}
+#divhome2{
+  float:right;
+  background:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  width:40%;
+  height:400px;
+  margin-top:100px;
+  overflow:hidden;
+}
+#divhome3{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:400px;
+  margin-top: 100px;
 }
 
 #header .text{
@@ -81,6 +131,10 @@ body, html {
   top: 50%;
   bottom: 0;
 }
+
+#navstop{
+  margin-bottom: 30px;
+}
 /* Navigation bar End*/
 
 
@@ -109,34 +163,31 @@ body, html {
   #footer{
     position:flex;
     bottom:0;
+    margin-top: 400px;
     width:100%;
     line-height: 1.7;
     color: white;  /* Change color off footer text(not links)*/
-    background:linear-gradient(180deg, rgba(104,139,158,0) 0%, rgba(0,0,0,1) 50%);
+    font-family: Arial, Helvetica, sans-serif;
+    background:linear-gradient(to top, #65686f 0%, #65686f 10%);
   }
-
-
   #footer a{
     color: white;  /* Change color off footer links*/
     text-decoration-line: underline;
+    font-family: Arial, Helvetica, sans-serif;
   }
-
   #footer ul{
     list-style-type: none;
   }
-
   #footer .about {
     display: block;
     float:left;
     margin-left: 50px;
   }
-
   #footer .socialmedia {
     display: block;
     float:left;
     margin-left: 50px;
   }
-
   #footer .contact {
     display: block;
     float:left;

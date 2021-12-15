@@ -61,7 +61,7 @@ var showSmplPage = function () {
 };
 
 //viser om-siden når man trykker på about & contakt
-aboutPage = document.getElementById("gaming");
+aboutPage = document.getElementById("about-contact");
 
 var showAbout = function () {
   if (aboutPage.className = 'hidden') {
@@ -69,7 +69,7 @@ var showAbout = function () {
   } else {
     aboutPage.className = "hidden";
   }
-  location.href = ('#gaming');
+  location.href = ('#about-contact');
 };
 
 
@@ -96,4 +96,3 @@ var hideEnterSite = function () {
     behavior: 'smooth'
   });
 }*/
-
